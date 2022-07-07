@@ -15,7 +15,7 @@ const authentication = function (req, res, next) {
             res.status(401).send({ status: false, msg: " token is required" })
         }
 
-        let decodedToken = jwt.verify(token, { ignoreExpiration: true })
+        let decodedToken = jwt.decode(token)
         if (!decodedToken) {
             return res.status(401).send({ status: false, msg: "token is invalid" })
         }
