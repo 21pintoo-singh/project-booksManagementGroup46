@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const bookModel = require("../Models/BookModel")
+const bookModel = require("../Modules/BooksModel")
 
 
 const isValidObjectId = function (objectId) {
